@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-white bg-main-black;
+  }
+}
+
+@layer utilities {
+  .bg-gradient-top {
+    background: linear-gradient(to top, transparent 0%, #050a18 100%);
+  }
+  .bg-gradient-bottom {
+    background: linear-gradient(to bottom, transparent 0%, #050a18 100%);
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Firefox */
+
+/* Hero Carousel */
+.hero-carousel__slides {
+  @apply w-full;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  @apply !text-white;
+}
+
+.swiper-pagination-bullet-active {
+  @apply !bg-white;
+}
+
+/* 
+body {
+  --black: #000000;
+  --ash-black: #222;
+  --white: #fafafa;
+  --sky: #00ccff;
+  --green: #22dddd;
+  --blue: #1300ff;
+  --dusk: #6600ff;
+  --purple: #9900ff;
+  --pink: #ff0066;
+  --red: #fe0222;
+  --orange: #fd7702;
+  --yellow: #ffbb00;
+
+  --background: var(--purple);
+  --accent: var(--white);
+
+  margin: 0;
+  padding: 0;
+  background-color: var(--background);
+  color: var(--accent);
+} */
