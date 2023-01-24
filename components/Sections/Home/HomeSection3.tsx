@@ -1,6 +1,6 @@
 import { motion, useScroll, useSpring } from "framer-motion";
 import { useEffect } from "react";
-const h1Text = "Happy birthday";
+const h1Text = "Happy Birthday";
 const h2Text = "Brigida dadada";
 
 const typingContainerVariants = {
@@ -83,7 +83,7 @@ const HomeSection3 = () => {
               <motion.div variants={typingContainerVariants} initial="hidden" whileInView="visible" className="mb-4">
                 {h1Text.split("").map((char, i) => {
                   return (
-                    <motion.span key={`h1${char}${i}`} className="text-5xl sm:text-7xl md:text-9xl font-extrabold" variants={typingVariants}>
+                    <motion.span key={`h1${char}${i}`} className="text-5xl sm:text-7xl md:text-9xl font-extrabold bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent" variants={typingVariants}>
                       {char}
                     </motion.span>
                   );
@@ -94,7 +94,7 @@ const HomeSection3 = () => {
               <motion.div variants={typingContainerVariants} initial="hidden" whileInView="visible" className="mb-4">
                 {h2Text.split("").map((char, i) => {
                   return (
-                    <motion.span key={`h1${char}${i}`} className="md:text-5xl text-xl text-slate-500" variants={typingVariants}>
+                    <motion.span key={`h1${char}${i}`} className="md:text-6xl text-2xl text-white font-bold" variants={typingVariants}>
                       {char}
                     </motion.span>
                   );

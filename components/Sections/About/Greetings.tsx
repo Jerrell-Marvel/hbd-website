@@ -29,8 +29,8 @@ const Greetings = () => {
   //   // return unsubscribeY();
   // }, []);
   return (
-    <motion.div className="text-center md:text-5xl font-extrabold text-xl md:py-28 px-12 py-14 overflow-hidden">
-      <motion.p variants={pVariants} initial="hidden" whileInView="visible" className="text-slate-200">
+    <motion.div className="md:text-5xl text-xl font-semibold md:py-28 px-12 py-8 overflow-hidden">
+      <motion.p variants={pVariants} initial="hidden" whileInView="visible" className="text-slate-200 text-center">
         Hi there! My name is Jerrell Marvel a computer science student at UNPAR. I am extremely passionate about web development and always look for opportunities to expand my knowledge and skills in this field. In my free time, you can
         find me tinkering with new projects or researching the latest trends in web development.
       </motion.p>

@@ -2,30 +2,32 @@ import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "@next/font/google";
 import styles from "../styles/Home.module.css";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import AboutSection from "../components/Sections/About/Greetings";
 import HomeSection3 from "../components/Sections/Home/HomeSection3";
 import Footer from "../components/Footer/Footer";
 import ProgressBar from "../components/ProgressBar/ProgressBar";
 import Carousel from "../components/Carousel/Carousel";
 import Greetings from "../components/Sections/About/Greetings";
+import Sticker from "../components/Sticker/Sticker";
+import Modal from "../components/Modal/Modal";
+import { useState } from "react";
 
-const inter = Inter({ subsets: ["latin"] });
-
-const blurBgVariants = {
-  hidden: {
-    filter: "blur(50px)",
+const modalVariants = {
+  initial: {
+    y: 0,
+    opacity: 1,
   },
-
-  visible: {
-    filter: "blur(0px)",
+  hidden: {
+    opacity: 0,
     transition: {
-      duration: 1,
-      ease: "easeOut",
+      duration: 0.5,
     },
   },
 };
+
 export default function Home() {
+  const [isShowing, setIsShowing] = useState(true);
   return (
     <>
       <Head>
@@ -34,43 +36,27 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
 
-        <link rel="preconnect" href="https://fonts.googleapis.com"></link>
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true"></link>
-        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"></link>
+        {/* <link rel="preconnect" href="https://fonts.googleapis.com"></link>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true"></link> */}
+        {/* <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"></link> */}
       </Head>
-
-      {/* <HomeSection /> */}
-      {/* <div className="top-0 left-0 right-0 bottom-0 absolute bg-slate-600 z-10 opacity-50 blur-md"> */}
-
-      {/* <motion.div variants={blurBgVariants} initial="hidden" animate="visible"> */}
-
-      {/* <HomeSection2 /> */}
-      <ProgressBar />
-      <HomeSection3 />
-
-      <Greetings />
-
-      {/* <div className="pt-8">
-        <ParallaxText baseVelocity={-5}>Frontend development</ParallaxText>
-        <ParallaxText baseVelocity={5}>Backend development</ParallaxText>
-      </div> */}
-
-      {/* <SkillsSection /> */}
-      {/* <SkillsSection2 /> */}
-      {/* <div className="w-full h-screen bg-no-repeat bg-[url('/test-img.jpg')] bg-cover"></div> */}
-      <Carousel />
-
-      {/* <PortfolioSection /> */}
-      {/* <ContactSection /> */}
-      <Footer />
-      {/* <Test /> */}
-
-      {/* <div className="w-full h-[300px] bg-slate-200"></div> */}
-      {/* <SkillsSection /> */}
-      {/* <div className="w-full h-[600px] bg-main-black"></div> */}
-      {/* <div className="w-full h-[3000px] bg-slate-200"></div> */}
-      {/* <HomeSection /> */}
-      {/* </motion.div> */}
+      <AnimatePresence>
+        {isShowing ? (
+          <motion.div variants={modalVariants} initial="visible" exit="hidden">
+            <Modal setIsShowing={setIsShowing} />
+          </motion.div>
+        ) : null}
+      </AnimatePresence>
+      {!isShowing ? (
+        <div>
+          <ProgressBar />
+          <HomeSection3 />
+          <Greetings />
+          <Carousel />
+          <Sticker />
+          <Footer />
+        </div>
+      ) : null}
     </>
   );
 }

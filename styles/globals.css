@@ -33,30 +33,11 @@
   @apply !text-white;
 }
 
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  @apply !text-xs md:!text-2xl;
+}
+
 .swiper-pagination-bullet-active {
   @apply !bg-white;
 }
-
-/* 
-body {
-  --black: #000000;
-  --ash-black: #222;
-  --white: #fafafa;
-  --sky: #00ccff;
-  --green: #22dddd;
-  --blue: #1300ff;
-  --dusk: #6600ff;
-  --purple: #9900ff;
-  --pink: #ff0066;
-  --red: #fe0222;
-  --orange: #fd7702;
-  --yellow: #ffbb00;
-
-  --background: var(--purple);
-  --accent: var(--white);
-
-  margin: 0;
-  padding: 0;
-  background-color: var(--background);
-  color: var(--accent);
-} */
