@@ -30,9 +30,11 @@ const Greetings = () => {
   // }, []);
   return (
     <motion.div className="md:text-5xl text-xl font-semibold md:py-28 px-12 py-8 overflow-hidden">
-      <motion.p variants={pVariants} initial="hidden" whileInView="visible" className="text-slate-200 text-center">
-        Hi there! My name is Jerrell Marvel a computer science student at UNPAR. I am extremely passionate about web development and always look for opportunities to expand my knowledge and skills in this field. In my free time, you can
-        find me tinkering with new projects or researching the latest trends in web development.
+      <motion.p variants={pVariants} initial="hidden" whileInView="visible" className="text-main-black text-center">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore tenetur veniam a eveniet nostrum non nihil alias accusamus, mollitia dolorem aperiam corporis, officia nemo explicabo molestias dicta magni beatae obcaecati ab
+        quibusdam assumenda magnam omnis. Rerum suscipit, sapiente recusandae vero alias illo placeat architecto hic quia sed voluptate cumque molestias ducimus iusto voluptatem impedit voluptas aspernatur itaque ea provident nesciunt ipsa
+        quidem quaerat. Consequatur nemo qui voluptates quas ea optio quia nihil minima autem labore recusandae perferendis quos vitae cumque voluptatibus, tempore facilis quisquam. Voluptatem tempora odit sequi doloremque ex aliquam
+        molestiae ad beatae hic ratione consequuntur, maxime nulla sed.
       </motion.p>
       {/* <div></div>
 

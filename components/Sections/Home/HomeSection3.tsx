@@ -1,7 +1,7 @@
 import { motion, useScroll, useSpring } from "framer-motion";
 import { useEffect } from "react";
 const h1Text = "Happy Birthday";
-const h2Text = "Brigida dadada";
+const h2Text = "Brigida Adinda A";
 
 const typingContainerVariants = {
   hidden: {},
@@ -83,37 +83,27 @@ const HomeSection3 = () => {
               <motion.div variants={typingContainerVariants} initial="hidden" whileInView="visible" className="mb-4">
                 {h1Text.split("").map((char, i) => {
                   return (
-                    <motion.span key={`h1${char}${i}`} className="text-5xl sm:text-7xl md:text-9xl font-extrabold bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent" variants={typingVariants}>
+                    <motion.span key={`h1${char}${i}`} className="text-6xl sm:text-7xl md:text-9xl font-extrabold text-yellow-500" variants={typingVariants}>
                       {char}
                     </motion.span>
                   );
                 })}
               </motion.div>
-              {/* <h1 className="text-5xl sm:text-7xl md:text-9xl text-white font-bold bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent mb-2">Jerrell Marvel</h1> */}
 
               <motion.div variants={typingContainerVariants} initial="hidden" whileInView="visible" className="mb-4">
                 {h2Text.split("").map((char, i) => {
                   return (
-                    <motion.span key={`h1${char}${i}`} className="md:text-6xl text-2xl text-white font-bold" variants={typingVariants}>
+                    <motion.span key={`h1${char}${i}`} className="md:text-6xl text-4xl text-main-black font-bold" variants={typingVariants}>
                       {char}
                     </motion.span>
                   );
                 })}
               </motion.div>
-              {/* <h2 className="md:text-5xl text-xl text-slate-500">Lorem, ipsum dolor.</h2> */}
-              {/* <p className="mb-4 text-slate-500 md:text-lg lg:text-lg">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. At, numquam? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod at cupiditate perferendis ex pariatur minus cumque? Incidunt itaque repudiandae fuga ab
-                illo suscipit sint cum sequi voluptates quia quo, possimus vel hic sunt accusamus amet quae iste beatae impedit voluptate.
-              </p> */}
-              {/* <Link to="/">
-                <button className="my-4 w-full border-2 border-black bg-primary py-4 uppercase text-white transition-colors duration-300 hover:bg-white hover:text-black">start shopping</button>
-              </Link> */}
             </div>
 
             <div className="h-full w-full sm:ml-4 md:ml-6 lg:ml-8 relative">
-              {/* <motion.div className="absolute top-0 bottom-0 right-0 left-0 bg-main-black" variants={bgImgVariants} animate="visible" initial="hidden"></motion.div> */}
               <motion.img
-                src="https://www.designyourway.net/blog/wp-content/uploads/2019/05/iPad-Pro-wallpaper-54-700x700.jpg"
+                src="/main-img.jpg"
                 alt=""
                 className="mx-auto max-w-full"
                 variants={imgVariants}

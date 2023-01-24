@@ -10,11 +10,11 @@ import { motion } from "framer-motion";
 
 const carouselVariants = {
   hidden: {
-    opacity: 0,
+    // opacity: 0,
     scale: 1.5,
   },
   visible: {
-    opacity: 1,
+    // opacity: 1,
     scale: 1,
     transition: {
       duration: 1.5,

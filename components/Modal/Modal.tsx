@@ -20,8 +20,8 @@ type ModalProps = {
 const Modal = ({ setIsShowing }: ModalProps) => {
   return (
     <div>
-      <div className="fixed top-0 left-0 right-0 bottom-0 bg-main-black z-[999] flex flex-col items-center gap-8 py-8 justify-center px-6">
-        <h2 className="md:text-6xl text-5xl font-extrabold text-center">p nya di click yeee</h2>
+      <div className="fixed top-0 left-0 right-0 bottom-0 z-[999] flex flex-col items-center gap-8 py-8 justify-center px-6">
+        <h2 className="md:text-6xl text-5xl font-extrabold text-center text-black">p nya di click yeee</h2>
         <motion.img
           src="/p.webp"
           onClick={() => {

@@ -4,6 +4,10 @@
 
 @layer base {
   body {
+    background-image: url("../public/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     @apply text-white bg-main-black;
   }
 }

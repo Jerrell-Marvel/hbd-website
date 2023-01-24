@@ -54,7 +54,8 @@ export default function Home() {
           <Greetings />
           <Carousel />
           <Sticker />
-          <Footer />
+          {/* <Sticker2 /> */}
+          {/* <Footer /> */}
         </div>
       ) : null}
     </>
