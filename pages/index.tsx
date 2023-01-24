@@ -30,7 +30,7 @@ export default function Home() {
     <>
       <Head>
         <title>Happy Birthday!</title>
-        <meta name="description" content="Jerrell Marvel's personal portfolio website" />
+        <meta name="description" content="Created by Nathanael Christian" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
 
