@@ -49,7 +49,7 @@ export default function Home() {
       </AnimatePresence>
       {!isShowing ? (
         <div>
-          <ProgressBar />
+          {/* <ProgressBar /> */}
           <HomeSection3 />
           <Greetings />
           <Carousel />
