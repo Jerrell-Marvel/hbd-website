@@ -6,7 +6,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import AboutSection from "../components/Sections/About/Greetings";
 import HomeSection3 from "../components/Sections/Home/HomeSection3";
 import Footer from "../components/Footer/Footer";
-import ProgressBar from "../components/ProgressBar/ProgressBar";
 import Carousel from "../components/Carousel/Carousel";
 import Greetings from "../components/Sections/About/Greetings";
 import Sticker from "../components/Sticker/Sticker";
