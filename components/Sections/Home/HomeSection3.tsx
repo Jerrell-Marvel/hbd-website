@@ -77,7 +77,7 @@ const HomeSection3 = () => {
     <>
       <div></div>
       <section className="overflow-hidden">
-        <div className="px-12 pt-8 md:pt-16">
+        <div className="px-6 pt-8 md:pt-16 md:px-12">
           <div className="flex flex-col items-center sm:flex-row">
             <div className="w-full flex-col justify-center sm:flex sm:pr-4 md:pr-6 lg:pr-8">
               <motion.div variants={typingContainerVariants} initial="hidden" whileInView="visible" className="mb-4">

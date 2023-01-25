@@ -16,7 +16,7 @@ const ProgressBar = () => {
     damping: 30,
     restDelta: 0.001,
   });
-  return <motion.div className="top-0 w-1 bg-blue-900 fixed h-full z-50 right-0 bottom-0 origin-top rounded-full" style={{ scaleY }}></motion.div>;
+  return <motion.div className="top-0 w-1 bg-slate-400 fixed h-full z-50 right-0 bottom-0 origin-top rounded-full" style={{ scaleY }}></motion.div>;
 };
 
 export default ProgressBar;

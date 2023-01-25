@@ -44,14 +44,10 @@ const textVariants = {
 
 const Footer = () => {
   return (
-    <div className="w-full relative overflow-hidden">
-      <motion.img src="/bg-landscape2.webp" alt="" className="opacity-20 block bg-fixed" whileInView="visible" variants={imgVariants} />
-      <motion.div variants={h3Variants} whileInView="visible" initial="hidden" className="absolute top-0 left-0 bottom-0 right-0 flex justify-center items-end"></motion.div>
-      <div className="bg-gradient-top absolute top-0 w-full h-1/2"></div>
-      <div className="bg-gradient-bottom absolute bottom-[0] w-full h-1/2"></div>
-      <motion.div className="md:text-2xl text-lg text-slate-500 absolute bottom-0 w-full text-center pb-8 md:pb-16" variants={textVariants} initial="hidden" whileInView="visible">
-        <p>Pesan singkat</p>
-      </motion.div>
+    <div className="w-full flex justify-center pb-6 md:pb-12 px-6 text-center">
+      <motion.p className="md:text-2xl text-lg text-main-black font-bold" variants={textVariants} initial="hidden" whileInView="visible">
+        Last but not least, Thank You.. bul&#60;3
+      </motion.p>
     </div>
   );
 };

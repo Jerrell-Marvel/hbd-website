@@ -29,13 +29,13 @@ const Greetings = () => {
   //   // return unsubscribeY();
   // }, []);
   return (
-    <motion.div className="md:text-5xl text-xl font-semibold md:py-28 px-12 py-8 overflow-hidden">
+    <motion.div className="md:text-5xl text-xl font-semibold md:py-20 px-6 py-8 overflow-hidden md:px-12">
       <motion.p variants={pVariants} initial="hidden" whileInView="visible" className="text-main-black text-center">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore tenetur veniam a eveniet nostrum non nihil alias accusamus, mollitia dolorem aperiam corporis, officia nemo explicabo molestias dicta magni beatae obcaecati ab
-        quibusdam assumenda magnam omnis. Rerum suscipit, sapiente recusandae vero alias illo placeat architecto hic quia sed voluptate cumque molestias ducimus iusto voluptatem impedit voluptas aspernatur itaque ea provident nesciunt ipsa
-        quidem quaerat. Consequatur nemo qui voluptates quas ea optio quia nihil minima autem labore recusandae perferendis quos vitae cumque voluptatibus, tempore facilis quisquam. Voluptatem tempora odit sequi doloremque ex aliquam
-        molestiae ad beatae hic ratione consequuntur, maxime nulla sed.
+        Happy 19th Birthday kakkk… akhire 19 tahun juga to kamu sama kek aku (told u kita tuu cuman beda 1 bulan WKWKKW, jadi jangan bilang aku tua lagi yak!). Anyway, Wish You All The Best yaaa, semoga di 19 tahun ini bisa semakin
+        bertumbuh dewasa dengan baik, semakin panjang umur, semakin baik hati, semakin bertanggung jawab dan bisa diandalkan, semakin peduli sama sesama, semakin sayang juga tentunya sama keluargamu (kalo sama aku gimana xixixixi), SEMOGA
+        YANG BELUM TERSEMOGAKAN BISA TERSEMOGAKAN DEH! AMIN.
       </motion.p>
+
       {/* <div></div>
 
       <div></div> */}
