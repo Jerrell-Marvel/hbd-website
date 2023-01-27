@@ -71,7 +71,8 @@ const HomeSection3 = () => {
             </div>
 
             <motion.div className="w-full sm:ml-4 md:ml-6 lg:ml-8 relative" variants={imgVariants} whileInView="visible" initial="hidden">
-              <Image src="/main-img.jpg" width={1072} height={1072} layout="responsive" alt="main-img" priority />
+              <img src="/main-img.jpg" alt="" />
+              {/* <Image src="/main-img.jpg" width={1072} height={1072} layout="responsive" alt="main-img" priority /> */}
             </motion.div>
           </div>
         </div>
