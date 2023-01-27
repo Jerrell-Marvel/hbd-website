@@ -6,7 +6,8 @@ import Carousel from "../components/Carousel/Carousel";
 import Greetings from "../components/Sections/About/Greetings";
 import Sticker from "../components/Sticker/Sticker";
 import Modal from "../components/Modal/Modal";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import useSound from "use-sound";
 
 const modalVariants = {
   initial: {
@@ -23,6 +24,16 @@ const modalVariants = {
 
 export default function Home() {
   const [isShowing, setIsShowing] = useState(true);
+  const [play] = useSound("/hbd-sound.mp3");
+  useEffect(() => {
+    console.log("here");
+    play();
+    const interval = setInterval(() => {
+      play();
+    }, 37500);
+    return () => clearInterval(interval);
+  }, [isShowing, play]);
+
   return (
     <>
       <Head>
@@ -35,6 +46,10 @@ export default function Home() {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true"></link> */}
         {/* <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"></link> */}
       </Head>
+      {/* <audio controls src="../public/hbd-sound.mp3" autoPlay>
+        Your browser does not support the
+        <code>audio</code> element.
+      </audio> */}
       <AnimatePresence>
         {isShowing ? (
           <motion.div variants={modalVariants} initial="visible" exit="hidden">
