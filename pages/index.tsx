@@ -6,7 +6,7 @@ import Carousel from "../components/Carousel/Carousel";
 import Greetings from "../components/Sections/About/Greetings";
 import Sticker from "../components/Sticker/Sticker";
 import Modal from "../components/Modal/Modal";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import useSound from "use-sound";
 
 const modalVariants = {
@@ -25,14 +25,18 @@ const modalVariants = {
 export default function Home() {
   const [isShowing, setIsShowing] = useState(true);
   const [play] = useSound("/hbd-sound.mp3");
+  const isFirstRender = useRef(true);
   useEffect(() => {
-    console.log("here");
-    play();
-    const interval = setInterval(() => {
+    isFirstRender.current = false;
+    if (!isFirstRender.current) {
+      console.log("here");
       play();
-    }, 37500);
-    return () => clearInterval(interval);
-  }, [isShowing, play]);
+      const interval = setInterval(() => {
+        play();
+      }, 37500);
+      return () => clearInterval(interval);
+    }
+  }, [isShowing]);
 
   return (
     <>
