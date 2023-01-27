@@ -1,21 +1,8 @@
 import { motion } from "framer-motion";
-import { Dispatch, SetStateAction, useState } from "react";
+import { Dispatch, SetStateAction } from "react";
 type ModalProps = {
   setIsShowing: Dispatch<SetStateAction<boolean>>;
 };
-
-// const modalVariants = {
-//   visible: {
-//     y: 0,
-//   },
-//   hidden: {
-//     y: "-50%",
-//     transition: {
-//       //   type: "spring",
-//       duration: 2,
-//     },
-//   },
-// };
 
 const Modal = ({ setIsShowing }: ModalProps) => {
   return (

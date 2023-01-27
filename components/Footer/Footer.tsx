@@ -1,12 +1,10 @@
-import { motion, useScroll, useSpring } from "framer-motion";
-import { useEffect } from "react";
+import { motion } from "framer-motion";
 const imgVariants = {
   hidden: {
     scale: 1.1,
   },
   visible: {
     scale: 2,
-    // opacity: 0.2,
     transition: {
       duration: 4,
     },

@@ -4,17 +4,15 @@ import { Autoplay, Pagination, Navigation, EffectFade } from "swiper";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 import { motion } from "framer-motion";
 
 const carouselVariants = {
   hidden: {
-    // opacity: 0,
     scale: 1.5,
   },
   visible: {
-    // opacity: 1,
     scale: 1,
     transition: {
       duration: 1.5,
@@ -48,8 +46,8 @@ function Carousel() {
             {heroImages.map((img, index) => {
               return (
                 <SwiperSlide className="hero-carousel__slide w-full relative" key={index}>
-                  <div className="w-full relative aspect-[16/9]">
-                    <Image src={img} alt={img} fill />
+                  <div className="w-full relative">
+                    <Image src={img} alt={img} className="w-full" width={1600} height={901} layout="responsive" />
                   </div>
                 </SwiperSlide>
               );

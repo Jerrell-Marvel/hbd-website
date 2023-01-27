@@ -1,9 +1,5 @@
 import Head from "next/head";
-import Image from "next/image";
-import { Inter } from "@next/font/google";
-import styles from "../styles/Home.module.css";
 import { AnimatePresence, motion } from "framer-motion";
-import AboutSection from "../components/Sections/About/Greetings";
 import HomeSection3 from "../components/Sections/Home/HomeSection3";
 import Footer from "../components/Footer/Footer";
 import Carousel from "../components/Carousel/Carousel";

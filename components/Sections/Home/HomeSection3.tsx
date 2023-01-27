@@ -1,5 +1,6 @@
-import { motion, useScroll, useSpring } from "framer-motion";
-import { useEffect } from "react";
+import { motion } from "framer-motion";
+import Image from "next/legacy/image";
+
 const h1Text = "Happy Birthday";
 const h2Text = "Brigida Adinda A";
 
@@ -24,26 +25,6 @@ const typingVariants = {
   },
 };
 
-const bgImgVariants = {
-  hidden: {
-    y: "120%",
-  },
-  visible: {
-    y: 0,
-    height: "0",
-    transition: {
-      type: "tween",
-      ease: "easeOut",
-      height: {
-        duration: 0.6,
-        delay: 0.9,
-      },
-      delay: 0.3,
-      duration: 0.6,
-    },
-  },
-};
-
 const imgVariants = {
   hidden: {
     // y: "100%",
@@ -61,18 +42,6 @@ const imgVariants = {
   },
 };
 const HomeSection3 = () => {
-  //   const { scrollYProgress } = useScroll();
-
-  //   const scale = useSpring(1);
-  //   const y = useSpring(1);
-
-  //   useEffect(() => {
-  //     return scrollYProgress.onChange((latest) => {
-  //       scale.set(1 + latest);
-  //       y.set(latest * 1000);
-  //     });
-  //     // return unsubscribeY();
-  //   }, []);
   return (
     <>
       <div></div>
@@ -83,7 +52,7 @@ const HomeSection3 = () => {
               <motion.div variants={typingContainerVariants} initial="hidden" whileInView="visible" className="mb-4">
                 {h1Text.split("").map((char, i) => {
                   return (
-                    <motion.span key={`h1${char}${i}`} className="text-6xl sm:text-7xl md:text-9xl font-extrabold text-yellow-500" variants={typingVariants}>
+                    <motion.span key={`h1${char}${i}`} className="text-6xl sm:text-7xl lg:text-9xl font-extrabold text-yellow-500" variants={typingVariants}>
                       {char}
                     </motion.span>
                   );
@@ -101,17 +70,9 @@ const HomeSection3 = () => {
               </motion.div>
             </div>
 
-            <div className="h-full w-full sm:ml-4 md:ml-6 lg:ml-8 relative">
-              <motion.img
-                src="/main-img.jpg"
-                alt=""
-                className="mx-auto max-w-full"
-                variants={imgVariants}
-                whileInView="visible"
-                initial="hidden"
-                // style={{ scale }}
-              />
-            </div>
+            <motion.div className="w-full sm:ml-4 md:ml-6 lg:ml-8 relative" variants={imgVariants} whileInView="visible" initial="hidden">
+              <Image src="/main-img.jpg" width={1072} height={1072} layout="responsive" alt="main-img" priority />
+            </motion.div>
           </div>
         </div>
       </section>
